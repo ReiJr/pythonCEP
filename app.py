@@ -29,7 +29,7 @@ def buscaCEP(cep):
         conteudo    = pagina.decode('utf-8') #pagina.encode('utf-8')
         #resultado   = cgi.parse_qs(pagina)
         #print (pagina.encode('utf-8'))
-        print (pagina)
+        print (conteudo)
         #if resultado['resultado'][0] == '1':
         #        endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
         #print (endereco)
