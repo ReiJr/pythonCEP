@@ -1,1 +1,1 @@
-web: python cep.py
+web: python app.py
