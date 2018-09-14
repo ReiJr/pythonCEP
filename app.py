@@ -16,7 +16,7 @@ app = Flask(__name__)
 def hello():
         cep = "11463180"
         print (cep)
-        r = buscaCEP(cep) #.encode('utf-8')
+        r = buscaCEP(cep).encode('utf-8')
         print (r)
         return "seu endereço "
 
@@ -25,10 +25,10 @@ def hello():
 #  
 def buscaCEP(cep):
         url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=query_string"
-        pagina      = urlopen(url).read()  
+        #pagina      = urlopen(url).read()  
         #conteudo    = pagina.read();  
-        resultado   = cgi.parse_qs(pagina);
-        print (resultado)
+        #resultado   = cgi.parse_qs(pagina);
+        print (url)
         #if resultado['resultado'][0] == '1':
         #        endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
         #print (endereco)
