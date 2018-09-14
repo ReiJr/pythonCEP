@@ -16,8 +16,8 @@ app = Flask(__name__)
 def hello():
         cep = 11463180
         print (cep)
-        #r = buscaCEP(cep).encode('utf-8')
-        #print (r)
+        r = buscaCEP(cep) #.encode('utf-8')
+        print (r)
         return "seu endereço "
 
 #  
@@ -31,7 +31,7 @@ def buscaCEP(cep):
         if resultado['resultado'][0] == '1':
                 endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
         print (endereco)
-        return endereco.encode('utf-8')     
+        return endereco #.encode('utf-8')     
       
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
