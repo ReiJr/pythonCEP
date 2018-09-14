@@ -28,10 +28,11 @@ def buscaCEP(cep):
         pagina      = urlopen(url).read()  
         #conteudo    = pagina.read();  
         resultado   = cgi.parse_qs(pagina);
-        if resultado['resultado'][0] == '1':
-                endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
-        print (endereco)
-        return endereco #.encode('utf-8')     
+        print (resultado)
+        #if resultado['resultado'][0] == '1':
+        #        endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
+        #print (endereco)
+        return "ok" #.encode('utf-8')     
       
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
