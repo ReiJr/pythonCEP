@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-        cep = 11463180
+        cep = "11463180"
         print (cep)
         r = buscaCEP(cep) #.encode('utf-8')
         print (r)
