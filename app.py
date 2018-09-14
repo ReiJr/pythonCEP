@@ -16,6 +16,7 @@ app = Flask(__name__)
 def hello():
         cep = 11463180
         r = buscaCEP(cep)
+        print "r"
         return "seu endereço " + r
 
 #  
@@ -28,6 +29,7 @@ def buscaCEP(cep):
         resultado   = cgi.parse_qs(pagina);
         if resultado['resultado'][0] == '1':
                 endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
+        print endereco
         return endereco     
       
 if __name__ == "__main__":
