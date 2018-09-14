@@ -27,7 +27,7 @@ def buscaCEP(cep):
         url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=query_string"
         pagina      = urlopen(url).read()  
         conteudo    = pagina.decode('utf-8') #pagina.encode('utf-8')
-        resultado   = cgi.parse_qs(pagina)
+        resultado   = cgi.parse_qs(conteudo)
         #print (pagina.encode('utf-8'))
         print (resultado)
         #if resultado['resultado'][0] == '1':
