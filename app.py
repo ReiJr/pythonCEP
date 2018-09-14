@@ -30,7 +30,7 @@ def buscaCEP(cep):
         resultado   = cgi.parse_qs(conteudo)
         print (resultado)
         if resultado['resultado'][0] == '1':
-                endereco = resultado['tipo_logradouro'][0] #+ " " + str(resultado['logradouro'][0])
+                endereco = resultado['tipo_logradouro'][0] + " " + resultado['logradouro'][0]
         print (endereco)
         return "ok" #.encode('utf-8')     
       
