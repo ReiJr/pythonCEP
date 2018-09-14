@@ -26,8 +26,8 @@ def buscaCEP(cep):
         conteudo    = pagina.read();  
         resultado   = cgi.parse_qs(conteudo);
         if resultado['resultado'][0] == '1':
-                endereço = resultado['tipo_logradouro'][0] + " " + resultado['logradouro'][0]
-        return endereço     
+                endereco = resultado['tipo_logradouro'][0] + " " + resultado['logradouro'][0]
+        return endereco     
       
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
