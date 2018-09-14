@@ -18,7 +18,7 @@ def hello():
         print (cep)
         r = buscaCEP(cep).encode('utf-8')
         print (r)
-        return "seu endereço "
+        return r
 
 #  
 #   Busca CEP  
@@ -31,8 +31,8 @@ def buscaCEP(cep):
         print (resultado)
         if resultado['resultado'][0] == '1':
                 endereco = resultado['tipo_logradouro'][0] + " " + resultado['logradouro'][0]
-        print (endereco)
-        return "ok" #.encode('utf-8')     
+        #print (endereco)
+        return endereco #.encode('utf-8')     
       
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
