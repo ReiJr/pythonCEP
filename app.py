@@ -16,9 +16,9 @@ app = Flask(__name__)
 def hello():
         cep = 11463180
         print (cep)
-        r = buscaCEP(cep).encode('utf-8')
-        print (r)
-        return "seu endereço " + r
+        #r = buscaCEP(cep).encode('utf-8')
+        #print (r)
+        return "seu endereço "
 
 #  
 #   Busca CEP  
