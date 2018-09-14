@@ -3,7 +3,7 @@
 # Criado por: Felipe Olivaes  
 import urllib  
 import cgi  
-
+import os
 from flask import Flask
 from flask import request
 from flask import make_response
