@@ -24,7 +24,7 @@ def hello():
 #   Busca CEP  
 #  
 def buscaCEP(cep):
-        url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + str(cep) + "&formato=query_string"
+        url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=query_string"
         pagina      = urlopen(url).read()  
         #conteudo    = pagina.read();  
         resultado   = cgi.parse_qs(pagina);
