@@ -1,12 +1,13 @@
 #! /usr/bin/env python  
 # -*- coding: iso-8859-1 -*-  
 # Criado por: Felipe Olivaes  
-import urllib  
+#import urllib  
 import cgi  
 import os
 from flask import Flask
 from flask import request
 from flask import make_response
+from urllib.request import urlopen
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -22,9 +23,9 @@ def hello():
 #  
 def buscaCEP(cep):
         url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + str(cep) + "&formato=query_string"
-        pagina      = urllib.urlopen(url)  
-        conteudo    = pagina.read();  
-        resultado   = cgi.parse_qs(conteudo);
+        pagina      = urlopen(url).read()  
+        #conteudo    = pagina.read();  
+        resultado   = cgi.parse_qs(pagina);
         if resultado['resultado'][0] == '1':
                 endereco = resultado['tipo_logradouro'][0] + " " + resultado['logradouro'][0]
         return endereco     
