@@ -26,10 +26,10 @@ def hello():
 def buscaCEP(cep):
         url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=query_string"
         pagina      = urlopen(url).read()  
-        conteudo    = pagina.encode('utf-8')
+        pagina    = pagina.encode('utf-8')
         #resultado   = cgi.parse_qs(pagina)
         #print (pagina.encode('utf-8'))
-        print (conteudo)
+        print (pagina)
         #if resultado['resultado'][0] == '1':
         #        endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
         #print (endereco)
