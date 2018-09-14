@@ -8,7 +8,7 @@ from flask import Flask
 from flask import request
 from flask import make_response
 from urllib.request import urlopen
-
+from base64 import b64encode
 # Flask app should start in global layout
 app = Flask(__name__)
 
@@ -26,7 +26,7 @@ def hello():
 def buscaCEP(cep):
         url = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=query_string"
         pagina      = urlopen(url).read()  
-        conteudo    = base64.b64encode(bytes(pagina,'utf-8')) #pagina.encode('utf-8')
+        conteudo    = b64encode(bytes(pagina,'utf-8')) #pagina.encode('utf-8')
         #resultado   = cgi.parse_qs(pagina)
         #print (pagina.encode('utf-8'))
         print (pagina)
