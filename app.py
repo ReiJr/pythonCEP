@@ -27,7 +27,7 @@ def buscaCEP(cep):
         #conteudo    = pagina.read();  
         resultado   = cgi.parse_qs(pagina);
         if resultado['resultado'][0] == '1':
-                endereco = resultado['tipo_logradouro'][0]).encode('utf-8') #+ " " + str(resultado['logradouro'][0])
+                endereco = resultado['tipo_logradouro'][0].encode('utf-8') #+ " " + str(resultado['logradouro'][0])
         return endereco     
       
 if __name__ == "__main__":
